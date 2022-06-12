@@ -14,7 +14,7 @@ from decouple import config
 # https://dashboard.stripe.com/test/dashboard
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "SECRET_KEY"
+app.config['SECRET_KEY'] = config("SECRET_KEY")
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///cookies.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
