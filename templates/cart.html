@@ -1,0 +1,19 @@
+{% include "header.html" %}
+
+
+
+	<ul class="list-group">
+		{% for i in range(len) %}
+		  <li class="list-group-item d-flex justify-content-between align-items-center">
+			  {{ products[i].name }}
+			<span class="badge badge-primary badge-pill"><strong>x {{ quantity[i] }}</strong></span>
+			<span class="badge badge-primary badge-pill"><strong>total: ${{ totals[i]/100  }}</strong></span>
+		  </li>
+		{% endfor %}
+
+	</ul>
+	<h1>Grand total: ${{ grand_total/100 }}</h1>
+
+	<a class="icon solid fa-shopping-cart" href="{{ url_for('checkout') }}"><span>Checkout</span></a>
+
+</body>

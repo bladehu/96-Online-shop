@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Cookie Zone</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+					<div class="container">
+
+						<!-- Logo -->
+							<h1 id="logo"><a href="templates/index.html">COOKIE ZONE</a></h1>
+							<p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
+
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li><a class="icon solid fa-home" href="index.html"><span>Introduction</span></a></li>
+
+									{% if not logged_in: %}
+										<li><a class="icon solid fa-retweet" href="{{ url_for('login') }}"><span>Login</span></a></li>
+										<li><a class="icon solid fa-sitemap" href="{{ url_for('register') }}"><span>Register</span></a></li>
+
+									{% endif %}
+									{% if logged_in: %}
+										<li><a class="icon solid fa-cog" href="{{ url_for('logout') }}"><span>Logout</span></a></li>
+										<li><a class="icon solid fa-shopping-cart" href="{{ url_for('cart') }}"><span>Checkout</span></a></li>
+									{% endif %}
+								</ul>
+							</nav>
+
+					</div>
+				</section>
+			</div>

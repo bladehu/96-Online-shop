@@ -1,0 +1,7 @@
+1	Monster Cookie	No-spread cut out cookie frosted with a crusting almond buttercream icing	2500	https://www.inkatrinaskitchen.com/wp-content/uploads/2011/04/Cookie-Monster-Cookies.jpg
+2	Chocolate Chip Cookie	Simple basic chocolate chip cookie. This is all you would ever want.	1500	https://www.cookingclassy.com/wp-content/uploads/2014/06/chocolate-chip-cookie-16.jpg
+3	Matcha Chocolate Chip Cookie	These soft matcha chocolate chip cookies are an incredible twist on a classic chocolate chip cookie!	2000	https://cheneetoday.com/wp-content/uploads/2021/12/matcha-chocolate-chip-cookies.jpg
+4	Red Velvet White Chocolate Chip Cookies	These are deliciously soft and chewy, gorgeously red, they're dotted with creamy white chocolate...	2600	https://www.cookingclassy.com/wp-content/uploads/2012/08/red-velvet-cookies-8-500x375.jpg
+5	Thandai Shortbread Cookie	Buttery, floral, and with just the right amount of spice, there’s no better companion.	1800	https://assets.bonappetit.com/photos/6192d858145776572329fb74/4:3/w_1999,h_1499,c_limit/Thandai-Shortbread-Cookies.jpg
+
+
