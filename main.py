@@ -8,6 +8,7 @@ from functools import wraps
 import os
 from forms import RegisterForm, LoginForm, AddCookieForm
 import stripe
+from decouple import config
 
 # Stripe website
 # https://dashboard.stripe.com/test/dashboard
@@ -17,8 +18,8 @@ app.config['SECRET_KEY'] = "SECRET_KEY"
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///cookies.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-stripe.api_key = "sk_test_51L6FjlCuR4afO074xaNMTaE9El5PaH7dXnrWNhZ3z4GZ6IOtbklWRFFuvzmn99" \
-                 "cbmLo9G3F13eZq605Ze8LBX8vJ005fALQHWG"
+stripe.api_key = config("stripe.api_key")
+
 MY_DOMAIN = "http://127.0.0.1:5000/"
 
 db = SQLAlchemy(app)
@@ -70,7 +71,6 @@ def main_page():
     if request.method == "POST":
         line_item.append(
             {
-                    # Provide the exact Price ID (for example, pr_1234) of the product you want to sell
                     'price': request.form["product-id"],
                     'quantity': int(request.form["amount"]),
                 },
